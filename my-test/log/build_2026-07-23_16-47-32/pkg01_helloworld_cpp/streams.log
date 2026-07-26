@@ -1,0 +1,68 @@
+[0.076s] Invoking command in '/home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/gwk/ros2-dev/my-test/src/pkg01_helloworld_cpp -DCMAKE_INSTALL_PREFIX=/home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp
+[0.359s] -- The C compiler identification is GNU 11.4.0
+[0.559s] -- The CXX compiler identification is GNU 11.4.0
+[0.594s] -- Detecting C compiler ABI info
+[1.003s] -- Detecting C compiler ABI info - done
+[1.010s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.015s] -- Detecting C compile features
+[1.015s] -- Detecting C compile features - done
+[1.043s] -- Detecting CXX compiler ABI info
+[1.583s] -- Detecting CXX compiler ABI info - done
+[1.584s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.584s] -- Detecting CXX compile features
+[1.584s] -- Detecting CXX compile features - done
+[1.632s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.231s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.493s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[2.745s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.759s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.781s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.803s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.851s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.988s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.013s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.613s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.701s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.904s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.944s] -- Looking for pthread.h
+[4.364s] -- Looking for pthread.h - found
+[4.384s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.050s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[5.050s] -- Found Threads: TRUE  
+[5.166s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.330s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.331s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/gwk/ros2-dev/my-test/src/pkg01_helloworld_cpp/include>
+[5.333s] -- Configured cppcheck exclude dirs and/or files: 
+[5.333s] -- Added test 'lint_cmake' to check CMake code style
+[5.333s] -- Added test 'uncrustify' to check C / C++ code style
+[5.353s] -- Configured uncrustify additional arguments: 
+[5.354s] -- Added test 'xmllint' to check XML markup files
+[5.355s] -- Configuring done
+[5.375s] -- Generating done
+[5.375s] -- Build files have been written to: /home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp
+[5.417s] Invoked command in '/home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/gwk/ros2-dev/my-test/src/pkg01_helloworld_cpp -DCMAKE_INSTALL_PREFIX=/home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp
+[5.418s] Invoking command in '/home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp -- -j8 -l8
+[5.764s] [ 50%] [32mBuilding CXX object CMakeFiles/helloworld.dir/src/helloworld.cpp.o[0m
+[13.783s] [100%] [32m[1mLinking CXX executable helloworld[0m
+[14.743s] [100%] Built target helloworld
+[14.810s] Invoked command in '/home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp -- -j8 -l8
+[14.872s] Invoking command in '/home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp
+[14.898s] -- Install configuration: ""
+[14.899s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/lib/pkg01_helloworld_cpp/helloworld
+[14.909s] -- Set runtime path of "/home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/lib/pkg01_helloworld_cpp/helloworld" to ""
+[14.910s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/ament_index/resource_index/package_run_dependencies/pkg01_helloworld_cpp
+[14.910s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/ament_index/resource_index/parent_prefix_path/pkg01_helloworld_cpp
+[14.911s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/environment/ament_prefix_path.sh
+[14.911s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/environment/ament_prefix_path.dsv
+[14.911s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/environment/path.sh
+[14.911s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/environment/path.dsv
+[14.930s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/local_setup.bash
+[14.930s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/local_setup.sh
+[14.930s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/local_setup.zsh
+[14.931s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/local_setup.dsv
+[14.931s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/package.dsv
+[14.931s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/ament_index/resource_index/packages/pkg01_helloworld_cpp
+[14.931s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/cmake/pkg01_helloworld_cppConfig.cmake
+[14.931s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/cmake/pkg01_helloworld_cppConfig-version.cmake
+[14.932s] -- Installing: /home/gwk/ros2-dev/my-test/install/pkg01_helloworld_cpp/share/pkg01_helloworld_cpp/package.xml
+[14.938s] Invoked command in '/home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/gwk/ros2-dev/my-test/build/pkg01_helloworld_cpp

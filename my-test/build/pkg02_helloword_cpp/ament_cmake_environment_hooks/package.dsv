@@ -1,0 +1,4 @@
+source;share/pkg02_helloword_cpp/local_setup.bash
+source;share/pkg02_helloword_cpp/local_setup.dsv
+source;share/pkg02_helloword_cpp/local_setup.sh
+source;share/pkg02_helloword_cpp/local_setup.zsh
