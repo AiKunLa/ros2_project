@@ -11,7 +11,7 @@
 
   <depend>rclcpp</depend>
   <depend>rclcpp_action</depend>
-  <depend>base_interface_demo</depend>
+  <depend>base_interfaces_demo</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

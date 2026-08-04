@@ -30,7 +30,8 @@ class MinimalActionServer : public rclcpp::Node
 {
 public:
     // 接受一个NodeOptions的常引用，避免拷贝。如果不传递参数就默认构造一个NodeOptions对象
-    explicit MinimalActionServer(const rclcpp::NodeOptions &options = rclcpp::NodeOptions()) : Node("minimal_action_server", options)
+    explicit MinimalActionServer(const rclcpp::NodeOptions &options = rclcpp::NodeOptions())
+        : Node("minimal_action_server", options)
     {
         this->action_server_ = rclcpp_action::create_server<Progress>(
             this,
@@ -87,13 +88,13 @@ private:
     // 执行函数
     void execute(const std::shared_ptr<GoalHandleProgress> goal_handle)
     {
-        RCLCPP_INFO(this->get_logger(), "");
+        RCLCPP_INFO(this->get_logger(), "开始执行任务");
         rclcpp::Rate loop_rate(10.0);
-        const auto goal = goal_handle.get_goal();
+        const auto goal = goal_handle->get_goal();
 
         // 创建一个 Progress::Feedback 对象，并返回一个管理它的共享指针。 通常紧接着就用来填充反馈数据，比如：
-        auto feedbacek = std::make_shared<Progress::Feedback>();
-        auto result = std::make_shared<Progress ::Result>();
+        auto feedback = std::make_shared<Progress::Feedback>();
+        auto result = std::make_shared<Progress::Result>();
         int64_t sum = 0;
 
         for (int i = 1; (i <= goal->num) && rclcpp::ok(); i++)
@@ -103,19 +104,19 @@ private:
             {
                 result->sum = sum;
                 goal_handle->canceled(result);
-                RCLCPP_INFO(this->get_logger(), "");
+                RCLCPP_INFO(this->get_logger(), "任务取消");
                 return;
             }
-            feedbacek->progress = (double_t)i / goal->num;
-            goal_handle.publish_feedback(feedbacek);
-            RCLCPP_INFO(this->get_logger(), "");
+            feedback->progress = (double_t)i / goal->num;
+            goal_handle->publish_feedback(feedback);
+            RCLCPP_INFO(this->get_logger(), "连续反馈中，进度：%.2f", feedback->progress);
             loop_rate.sleep();
         }
         if (rclcpp::ok())
         {
             result->sum = sum;
             goal_handle->succeed(result);
-            RCLCPP_INFO(this->get_logger(), "");
+            RCLCPP_INFO(this->get_logger(), "任务完成！");
         }
     }
     // 生成连续反馈
@@ -128,7 +129,9 @@ private:
 
 int main(int argc, char const *argv[])
 {
+    // 初始化
     rclcpp::init(argc, argv);
+    // 创建MinimalActionServer 对象
     auto action_server = std::make_shared<MinimalActionServer>();
     rclcpp::spin(action_server);
     rclcpp::shutdown();
